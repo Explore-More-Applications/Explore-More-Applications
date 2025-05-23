@@ -23,9 +23,23 @@
 
             <h1 class="heading">Energy</h1>
 
-            <iframe src="Content/Energy.htm" frameborder="0" scrolling="no" class="content-html"></iframe>
+            <iframe src="Content/Energy.htm" frameborder="0" scrolling="no" class="content-html" id="myIframe"></iframe>
         </div>
 
+                <script>
+            function resizeIframe(iframe) {
+            try {
+                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+                } catch (e) {
+                console.warn("Resize failed:", e);
+                }
+            }
+
+            const iframe = document.getElementById('myIframe');
+            iframe.addEventListener('load', function () {
+            resizeIframe(iframe);
+            });
+        </script>
 
 
     </section>
