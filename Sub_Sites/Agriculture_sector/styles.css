@@ -23,7 +23,7 @@
      border: none;
    }
 
-      @media (max-width: 600px) {
+      @media (max-width: 800px) {
      iframe {
        height: 3050px;
      }
